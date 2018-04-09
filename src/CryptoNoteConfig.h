@@ -35,6 +35,8 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = 2100000000000000;
+const uint64_t SYNC_FROM_ZERO                                 = 1;
+
 const size_t MIN_MIXIN                          			 = 0;
 const uint8_t MANDATORY_MIXIN_BLOCK_VERSION    				 = 0;
 const uint32_t MIXIN_START_HEIGHT                         	 = 0;
@@ -42,7 +44,7 @@ const uint32_t MANDATORY_TRANSACTION                         = 0;
 const uint32_t KILL_HEIGHT                        			 = 0;
 const uint64_t TAIL_EMISSION_REWARD                          = 0;
 const size_t CRYPTONOTE_COIN_VERSION                         = 0;
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                 	 = 0;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                 	 = 30;
 const size_t ZAWY_DIFFICULTY_V2                          	 = 0;
 const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION   	 = 0;
 const uint32_t BUGGED_ZAWY_DIFFICULTY_BLOCK_INDEX            = 0;
@@ -63,20 +65,20 @@ const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(1000000)
 const uint64_t MAX_TRANSACTION_SIZE_LIMIT                    = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE * 125 / 100 - CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE;
 const uint64_t DEFAULT_FEE                        			 = MINIMUM_FEE;
 
-const uint64_t DIFFICULTY_TARGET                             = 5; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 const size_t   DIFFICULTY_WINDOW                             = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
 const size_t   DIFFICULTY_WINDOW_V1                          = DIFFICULTY_WINDOW;
 const size_t   DIFFICULTY_WINDOW_V2                          = DIFFICULTY_WINDOW;
-const size_t   DIFFICULTY_CUT                                = 60;  // timestamps to cut after sorting
-const size_t   DIFFICULTY_CUT_V1                             = DIFFICULTY_CUT;
-const size_t   DIFFICULTY_CUT_V2                             = DIFFICULTY_CUT;
-const size_t   DIFFICULTY_LAG                                = 15;  // !!!
-const size_t   DIFFICULTY_LAG_V1                             = DIFFICULTY_LAG;
-const size_t   DIFFICULTY_LAG_V2                             = DIFFICULTY_LAG;
+const size_t   DIFFICULTY_CUT                                = 0;  // timestamps to cut after sorting
+const size_t   DIFFICULTY_CUT_V1                             = 60;
+const size_t   DIFFICULTY_CUT_V2                             = 60;
+const size_t   DIFFICULTY_LAG                                = 0;  // !!!
+const size_t   DIFFICULTY_LAG_V1                             = 15;
+const size_t   DIFFICULTY_LAG_V2                             = 15;
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
-const size_t   MAX_BLOCK_SIZE_INITIAL                        =  20 * 1024;
+const size_t   MAX_BLOCK_SIZE_INITIAL                        =  100000;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 100 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
 
@@ -105,7 +107,7 @@ const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "	";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000181adf0eb1d029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a98953c2b21bd690ced6fbc800fa3a4956e7950e97c526447e219038416c2ef6";
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "NOBUCOINF";
