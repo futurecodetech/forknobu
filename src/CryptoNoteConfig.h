@@ -107,7 +107,7 @@ const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000181adf0eb1d029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a98953c2b21bd690ced6fbc800fa3a4956e7950e97c526447e219038416c2ef6";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010501ff00010002b5a4cb3e43e9c743ad4c5c22883596dba4d7fecc96a7cc3919ed4e5d3efe81f32101b64451d1fc003c98b9b8adc0682da98f0c823be9429cc92686d35f89ade34eaa";
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "NOBUCOINF";
